@@ -1,41 +1,40 @@
-# Prerequisites
-*.d
+# Ignore Quartus build files
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Quartus project outputs
+db/
+incremental_db/
+output_files/
+*.qws
+*.qpf
+*.qsf
+*.qsf.bak
+*.qws.bak
+*.sopcinfo
 
-# Precompiled Headers
-*.gch
-*.pch
+# NIOS V BSP outputs
+software/hal_bsp/*
+!software/hal_bsp/.gitkeep   # optional: keep folder structure
 
-# Linker files
-*.ilk
+# NIOS V app build outputs
+software/app/*.elf
+software/app/*.map
+software/app/*.lst
+software/app/*.o
+software/app/*.d
+software/app/*.hex
 
-# Debugger Files
-*.pdb
+# RiscFree IDE / CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# General temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+# Windows / system files
+Thumbs.db
+desktop.ini
