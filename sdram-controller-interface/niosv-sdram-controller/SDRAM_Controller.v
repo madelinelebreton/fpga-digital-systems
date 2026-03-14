@@ -27,7 +27,6 @@ module SDRAM_Controller (  //the ports sequence follows the sequence of wires in
 		output			data_validation,
 	
 		//signals between Conroller and SDRAM:
-			  
 		inout	 [15:0]	DRAM_DQ,
 		output [12:0]	DRAM_ADDR,
 		output [1:0]	DRAM_BA,
@@ -79,7 +78,7 @@ module SDRAM_Controller (  //the ports sequence follows the sequence of wires in
 
 		
 		
-		
+		// instantiate the controller
 		DE1_SoC_QSYS_sdram  my_sdram (
                             // inputs:
                              .az_addr(address_wire),
@@ -154,15 +153,17 @@ module SDRAM_Controller (  //the ports sequence follows the sequence of wires in
 		assign 			DRAM_UDQM=DRAM_DQM_wire[1];   	//higher bit for UDQM , lower bit for LDQM
 		assign			DRAM_LDQM=DRAM_DQM_wire[0];
 
+		// assigned for Lab 4
+		assign 			DRAM_ADDR=DRAM_ADDR_wire; // address lines of SDRAM chip 
+		assign 			DRAM_BA=DRAM_BA_wire; // bank address
+		assign 			DRAM_CKE=DRAM_CKE_wire; // clock enable
+		assign			DRAM_WE_N=DRAM_WE_N_wire;
+		assign 			DRAM_CAS_N=DRAM_CAS_N_wire;
+		assign 			DRAM_RAS_N=DRAM_RAS_N_wire;
+		assign			DRAM_CS_N=DRAM_CS_N_wire;
 		
 		
-	//  ********** More  necessary connections that YOUR NEED TO MAKE for Lab 4 project **************
-	//DRAM_ADDR
-	//DRAM_BA
-	//DRAM_CKE
-	//DRAM_WE_N
-	//DRAM_CAS_N
-	//DRAM_RAS_N
-	//DRAM_CS_N
+		
+
 								  
 endmodule
