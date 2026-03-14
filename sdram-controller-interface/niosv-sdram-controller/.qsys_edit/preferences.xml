@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="159" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Project/MT3TB4_G-11,Library,Project,Library/Basic Functions,Library/Memory Interfaces and Controllers" />
+ <window width="1406" height="859" x="33" y="0" />
+</preferences>
