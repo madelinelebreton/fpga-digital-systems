@@ -1,6 +1,6 @@
-# Ignore Quartus build files
-
-# Quartus project outputs
+# ----------------------------
+# Quartus build files / project outputs
+# ----------------------------
 db/
 incremental_db/
 output_files/
@@ -11,7 +11,14 @@ output_files/
 *.qws.bak
 *.sopcinfo
 
+# Quartus temporary / summary files
+*.rpt
+*.summary
+*.csv
+
+# ----------------------------
 # NIOS V BSP outputs
+# ----------------------------
 software/hal_bsp/*
 !software/hal_bsp/.gitkeep   # optional: keep folder structure
 
@@ -23,18 +30,34 @@ software/app/*.o
 software/app/*.d
 software/app/*.hex
 
+# ----------------------------
 # RiscFree IDE / CMake files
+# ----------------------------
 CMakeFiles/
 CMakeCache.txt
 cmake-build-*/
 
-# General temp files
+# ----------------------------
+# General temporary files
+# ----------------------------
 *.log
 *.tmp
 *.bak
 *.swp
 *.DS_Store
+*.old
+*.rej
 
+# ----------------------------
 # Windows / system files
+# ----------------------------
 Thumbs.db
 desktop.ini
+*:Zone.Identifier
+
+# ----------------------------
+# IDE / editor folders
+# ----------------------------
+.vs/
+.vscode/
+.idea/
